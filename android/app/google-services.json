@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "375923918429",
+    "project_id": "almuhafiz-25",
+    "storage_bucket": "almuhafiz-25.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375923918429:android:cfef165f0dd88835dfefb4",
+        "android_client_info": {
+          "package_name": "com.example.almuhafiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375923918429-24q2nm3uio5l1nufpcd3oep1196hl2je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf6QhJTLc_otxjeMszxAitqUGYw2NIeVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375923918429-24q2nm3uio5l1nufpcd3oep1196hl2je.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "375923918429-5mc7f75p2bfo0tguc8oig7m2n9dtktbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.almuhafiz"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375923918429:android:0e7a366e5b19f3a9dfefb4",
+        "android_client_info": {
+          "package_name": "com.example.almuhafiz_dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375923918429-24q2nm3uio5l1nufpcd3oep1196hl2je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf6QhJTLc_otxjeMszxAitqUGYw2NIeVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375923918429-24q2nm3uio5l1nufpcd3oep1196hl2je.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "375923918429-5mc7f75p2bfo0tguc8oig7m2n9dtktbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.almuhafiz"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375923918429:android:e1ddd1637f3c7255dfefb4",
+        "android_client_info": {
+          "package_name": "com.example.almuhafiz_teachers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375923918429-24q2nm3uio5l1nufpcd3oep1196hl2je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf6QhJTLc_otxjeMszxAitqUGYw2NIeVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375923918429-24q2nm3uio5l1nufpcd3oep1196hl2je.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "375923918429-5mc7f75p2bfo0tguc8oig7m2n9dtktbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.almuhafiz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
