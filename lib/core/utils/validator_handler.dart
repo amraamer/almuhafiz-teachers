@@ -40,9 +40,9 @@ class ValidatorHandler {
     if (!RegExp(r'[A-Za-z]').hasMatch(txt)) {
       return AppStrings.instance.passwordMustHaveLetter;
     }
-    if (!RegExp(r'[!@#\$&*~.,;:<>?/^%]').hasMatch(txt)) {
-      return AppStrings.instance.passwordMustHaveSymbol;
-    }
+    // if (!RegExp(r'[!@#\$&*~.,;:<>?/^%]').hasMatch(txt)) {
+    //   return AppStrings.instance.passwordMustHaveSymbol;
+    // }
 
     return null;
   };

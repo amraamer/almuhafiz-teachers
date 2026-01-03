@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: KeyboardDismisser(
         child: GetMaterialApp(
-          title: "المُحَفِّظ",
+          title: "المُحَفِّظين",
           debugShowCheckedModeBanner: false,
           getPages: AppPages.getAll,
-          initialRoute: AppRoutes.splash,
+          initialRoute: AppRoutes.register,
           initialBinding: AppInitBindings(),
           locale: localizationController.localizationString.value == 'ar'
               ? LocalizationService.arabicLocale

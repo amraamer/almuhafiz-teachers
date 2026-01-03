@@ -1,5 +1,5 @@
-import 'package:almuhafiz_teachers/networking/firebase_constants.dart';
-import 'package:almuhafiz_teachers/networking/firebase_error_model.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_constants.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_error_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class ErrorFactory {

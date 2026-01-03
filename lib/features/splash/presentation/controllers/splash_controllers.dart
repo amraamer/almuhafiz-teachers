@@ -16,7 +16,7 @@ class SplashController extends GetxController {
       // trigger checkAuth and wait minimum delay 2 seconds
       await Future.wait([
         Future.delayed(Duration(milliseconds: _minimumDelay)),
-        // _authService.checkAuth(),
+        _authService.checkAuth(),
       ]);
     } catch (e) {
       debugPrint("error in initApp in check Auth ${e.toString()}");

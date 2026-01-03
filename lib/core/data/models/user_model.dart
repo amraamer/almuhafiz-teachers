@@ -2,8 +2,8 @@ import 'package:almuhafiz_teachers/core/data/enums/country_code.dart';
 import 'package:almuhafiz_teachers/core/data/enums/languages.dart';
 import 'package:almuhafiz_teachers/core/data/enums/riwayah.dart';
 import 'package:almuhafiz_teachers/core/data/enums/user_levels.dart';
-import 'package:almuhafiz_teachers/networking/firebase_constants.dart';
-import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_constants.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 

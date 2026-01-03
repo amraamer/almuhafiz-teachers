@@ -38,11 +38,15 @@ class $AssetsFontsGen {
   List<String> get values => [decoTypeThuluthRegular];
 }
 
-class $AssetsImagesGen {
-  const $AssetsImagesGen();
+class $AssetsPngsGen {
+  const $AssetsPngsGen();
 
   /// File path: assets/pngs/alert.png
   AssetGenImage get alert => const AssetGenImage('assets/pngs/alert.png');
+
+  /// File path: assets/pngs/auth-image.png
+  AssetGenImage get authImage =>
+      const AssetGenImage('assets/pngs/auth-image.png');
 
   /// File path: assets/pngs/delete.png
   AssetGenImage get delete => const AssetGenImage('assets/pngs/delete.png');
@@ -54,6 +58,10 @@ class $AssetsImagesGen {
   /// File path: assets/pngs/error-square.png
   AssetGenImage get errorSquare =>
       const AssetGenImage('assets/pngs/error-square.png');
+
+  /// File path: assets/pngs/female_profile.png
+  AssetGenImage get femaleProfile =>
+      const AssetGenImage('assets/pngs/female_profile.png');
 
   /// File path: assets/pngs/fire-rank.png
   AssetGenImage get fireRank =>
@@ -70,8 +78,16 @@ class $AssetsImagesGen {
   AssetGenImage get logoName =>
       const AssetGenImage('assets/pngs/logo-name.png');
 
+  /// File path: assets/pngs/male-profile.png
+  AssetGenImage get maleProfile =>
+      const AssetGenImage('assets/pngs/male-profile.png');
+
   /// File path: assets/pngs/renewal.png
   AssetGenImage get renewal => const AssetGenImage('assets/pngs/renewal.png');
+
+  /// File path: assets/pngs/rug-image.png
+  AssetGenImage get rugImage =>
+      const AssetGenImage('assets/pngs/rug-image.png');
 
   /// File path: assets/pngs/success.png
   AssetGenImage get success => const AssetGenImage('assets/pngs/success.png');
@@ -79,14 +95,18 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     alert,
+    authImage,
     delete,
     errorCircle,
     errorSquare,
+    femaleProfile,
     fireRank,
     loadingImage,
     lock,
     logoName,
+    maleProfile,
     renewal,
+    rugImage,
     success,
   ];
 }
@@ -94,14 +114,69 @@ class $AssetsImagesGen {
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
+  /// File path: assets/svgs/apple.svg
+  String get apple => 'assets/svgs/apple.svg';
+
+  /// File path: assets/svgs/book-nav.svg
+  String get bookNav => 'assets/svgs/book-nav.svg';
+
+  /// File path: assets/svgs/google.svg
+  String get google => 'assets/svgs/google.svg';
+
+  /// File path: assets/svgs/guest.svg
+  String get guest => 'assets/svgs/guest.svg';
+
+  /// File path: assets/svgs/home-nav.svg
+  String get homeNav => 'assets/svgs/home-nav.svg';
+
   /// File path: assets/svgs/logo-name.svg
   String get logoName => 'assets/svgs/logo-name.svg';
+
+  /// File path: assets/svgs/man.svg
+  String get man => 'assets/svgs/man.svg';
+
+  /// File path: assets/svgs/moon-nav.svg
+  String get moonNav => 'assets/svgs/moon-nav.svg';
+
+  /// File path: assets/svgs/round-arrow-down.svg
+  String get roundArrowDown => 'assets/svgs/round-arrow-down.svg';
+
+  /// File path: assets/svgs/round-arrow-up.svg
+  String get roundArrowUp => 'assets/svgs/round-arrow-up.svg';
 
   /// File path: assets/svgs/search.svg
   String get search => 'assets/svgs/search.svg';
 
+  /// File path: assets/svgs/star.svg
+  String get star => 'assets/svgs/star.svg';
+
+  /// File path: assets/svgs/user-nav.svg
+  String get userNav => 'assets/svgs/user-nav.svg';
+
+  /// File path: assets/svgs/video-circle-nav.svg
+  String get videoCircleNav => 'assets/svgs/video-circle-nav.svg';
+
+  /// File path: assets/svgs/woman.svg
+  String get woman => 'assets/svgs/woman.svg';
+
   /// List of all assets
-  List<String> get values => [logoName, search];
+  List<String> get values => [
+    apple,
+    bookNav,
+    google,
+    guest,
+    homeNav,
+    logoName,
+    man,
+    moonNav,
+    roundArrowDown,
+    roundArrowUp,
+    search,
+    star,
+    userNav,
+    videoCircleNav,
+    woman,
+  ];
 }
 
 class Assets {
@@ -109,7 +184,7 @@ class Assets {
 
   static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
-  static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsPngsGen pngs = $AssetsPngsGen();
   static const $AssetsSvgsGen svgs = $AssetsSvgsGen();
 }
 

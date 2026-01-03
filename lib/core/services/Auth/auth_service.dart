@@ -1,14 +1,13 @@
   import 'package:almuhafiz_teachers/core/common/common_snacbar.dart';
-import 'package:almuhafiz_teachers/core/data/models/user_model.dart';
+import 'package:almuhafiz_teachers/core/data/models/teacher_model.dart';
 import 'package:almuhafiz_teachers/core/navigation/app_routes.dart';
-import 'package:almuhafiz_teachers/networking/firebase_constants.dart';
-import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_constants.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_keys.dart';
   import 'package:cloud_firestore/cloud_firestore.dart';
   import 'package:firebase_auth/firebase_auth.dart';
   import 'package:firebase_messaging/firebase_messaging.dart';
   import 'package:flutter/material.dart';
   import 'package:get/get.dart';
-  import 'package:get_storage/get_storage.dart';
 
   enum AuthType {
     none,
@@ -20,38 +19,38 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
 
     final Rx<AuthType> authType = AuthType.none.obs;
 
-    final Rx<UserModel?> currentUser = Rx<UserModel?>(null);
+    final Rx<TeacherModel?> currentUser = Rx<TeacherModel?>(null);
 
 
-    // void signIn(UserModel userModel) {
-    //   authType.value = AuthType.authenticated;
-    //   currentUser.value = userModel;
-    //   navigateUser();
-    //   try{
-    //     Get.find<FavoriteService>().getFavoritesFromFireStore();
-    //   }catch(e){
-    //     debugPrint("error while Get.find<Favorite>().getFavoritesFromFireStore(); $e");
-    //   }
-    // }
+    void signIn(TeacherModel teacher) {
+      authType.value = AuthType.authenticated;
+      currentUser.value = teacher;
+      navigateUser();
+      // try{
+      //   Get.find<FavoriteService>().getFavoritesFromFireStore();
+      // }catch(e){
+      //   debugPrint("error while Get.find<Favorite>().getFavoritesFromFireStore(); $e");
+      // }
+    }
 
     Future<void> checkAuth() async {
       try {
         final savedUser = FirebaseAuth.instance.currentUser;
 
         if (savedUser != null) {
-          if(savedUser.isAnonymous){
+          if (savedUser.isAnonymous) {
             authType.value = AuthType.guest;
-          }else{
-            try{
+          } else {
+            try {
               await FirebaseFirestore.instance
                   .collection(FirebaseConstants.usersCollection)
                   .doc(savedUser.uid)
                   .get()
                   .then((value) {
-                currentUser.value = UserModel.fromJson(value.data()!);
+                currentUser.value = TeacherModel.fromJson(value.data()!);
                 authType.value = AuthType.authenticated;
               });
-            }catch(e){
+            } catch (e) {
               debugPrint("error while getUserFromFireStore checkAuth $e");
             }
           }
@@ -72,27 +71,29 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
     void navigateUser() {
       _updateDeviceTokenIfNeeded();
       if (FirebaseAuth.instance.currentUser != null) {
-        if(currentUser.value != null){
+        if (currentUser.value != null) {
           if (currentUser.value?.accountStatus ?? true) {
             Get.offAllNamed(AppRoutes.bottomNav);
           } else {
             Get.offAllNamed(AppRoutes.block);
           }
-        }else if (FirebaseAuth.instance.currentUser!.isAnonymous) {
+        } else if (FirebaseAuth.instance.currentUser!.isAnonymous) {
           Get.offAllNamed(AppRoutes.bottomNav);
-        }else {
+        } else {
           Get.offAllNamed(AppRoutes.login);
         }
-      }else {
-        bool sawOnboardingBefore = true;
-        final GetStorage storage = GetStorage();
-        sawOnboardingBefore = storage.read("seen_on_boarding") ?? false;
-        debugPrint("navigateUser: sawOnboardingBefore $sawOnboardingBefore");
-        if(sawOnboardingBefore){
-          Get.offAllNamed(AppRoutes.login);
-        }else{
-          Get.offAllNamed(AppRoutes.onBoarding);
-        }
+      }
+      else {
+        // bool sawOnboardingBefore = true;
+        // final GetStorage storage = GetStorage();
+        // sawOnboardingBefore = storage.read("seen_on_boarding") ?? false;
+        // debugPrint("navigateUser: sawOnboardingBefore $sawOnboardingBefore");
+        // if(sawOnboardingBefore){
+        //   Get.offAllNamed(AppRoutes.login);
+        // }else{
+        //   Get.offAllNamed(AppRoutes.onBoarding);
+        // }
+        Get.offAllNamed(AppRoutes.login);
       }
     }
 
@@ -100,14 +101,14 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
       await FirebaseAuth.instance.signInAnonymously();
       authType.value = AuthType.guest;
       Get.offAllNamed(AppRoutes.bottomNav);
-
     }
 
     void deviceTokenListener() async {
-      if(currentUser.value != null && authType.value == AuthType.authenticated) {
+      if (currentUser.value != null &&
+          authType.value == AuthType.authenticated) {
         FirebaseMessaging.instance.onTokenRefresh.listen((fcmToken) {
           FirebaseFirestore.instance
-              .collection(FirebaseConstants.usersCollection)
+              .collection(FirebaseConstants.teachersCollection)
               .doc(currentUser.value?.id)
               .update({FireKeys.fcmToken: fcmToken});
           currentUser.value = currentUser.value?.copyWith(fcmToken: fcmToken);
@@ -116,12 +117,15 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
     }
 
     Future<void> _updateDeviceTokenIfNeeded() async {
-      if(currentUser.value == null || authType.value != AuthType.authenticated) return;
+      if (currentUser.value == null ||
+          authType.value != AuthType.authenticated) {
+        return;
+      }
       String? fcmToken = await FirebaseMessaging.instance.getToken();
       if (fcmToken == null) return;
 
       final userDocRef = FirebaseFirestore.instance
-          .collection(FirebaseConstants.usersCollection)
+          .collection(FirebaseConstants.teachersCollection)
           .doc(currentUser.value?.id);
 
       final docSnapshot = await userDocRef.get();
@@ -180,7 +184,7 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
         }
         if (currentUser.value?.id != null) {
           await FirebaseFirestore.instance
-              .collection(FirebaseConstants.usersCollection)
+              .collection(FirebaseConstants.teachersCollection)
               .doc(currentUser.value!.id)
               .delete();
         }
@@ -191,7 +195,6 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
         Get.offAllNamed(AppRoutes.login);
 
         CommonSnackBar.success('accountDeleted'.tr);
-
       } on FirebaseAuthException catch (e) {
         if (e.code == 'requires-recent-login') {
           CommonSnackBar.error("accountDeletedAlert".tr);
@@ -203,7 +206,6 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
         debugPrint("deleteAccount error: $e");
       }
     }
-
 
 
     @override
@@ -224,5 +226,4 @@ import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
           return 'unexpectedError'.tr;
       }
     }
-
   }

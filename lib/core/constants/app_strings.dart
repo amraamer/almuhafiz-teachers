@@ -37,6 +37,11 @@ class AppStrings {
   String get updateAvailable => 'updateAvailable'.tr;
   String get updateNow => 'updateNow'.tr;
   String get tapToClose => 'tapToClose'.tr;
+  String get selectAll => 'selectAll'.tr;
+  String get items => 'items'.tr;
+  String get select => 'select'.tr;
+  String get addMore => 'addMore'.tr;
+  String get socialLinks => 'socialLinks'.tr;
 
   /// Validation  =======================================================
   String get requiredField => 'requiredField'.tr;
@@ -46,6 +51,7 @@ class AppStrings {
   String get enterLongerText => 'enterLongerText'.tr;
   String get enterAge => 'enterAge'.tr;
   String get enterValidNumber => 'enterValidNumber'.tr;
+  String get age => 'age'.tr;
   String get ageRange => 'ageRange'.tr;
   String get passwordsNotMatch => 'passwordsNotMatch'.tr;
   String get textTooLong140 => 'textTooLong140'.tr;
@@ -124,6 +130,8 @@ class AppStrings {
   String get enterPreferredName => 'enterPreferredName'.tr;
   String get enterNameHere => 'enterNameHere'.tr;
   String get yourAge => 'yourAge'.tr;
+  String get bio => 'bio'.tr;
+  String get bioHint => 'bioHint'.tr;
   String get enterAgeHere => 'enterAgeHere'.tr;
   String get yourGender => 'yourGender'.tr;
   String get male => 'male'.tr;
@@ -136,6 +144,11 @@ class AppStrings {
   String get completeYourInformation => 'completeYourInformation'.tr;
   String get mustAcceptTerms => 'mustAcceptTerms'.tr;
   String get loginAsGuest => 'loginAsGuest'.tr;
+  String get job => 'job'.tr;
+  String get enterYourJob => 'enterYourJob'.tr;
+  String get addSocialLink => 'addSocialLink'.tr;
+  String get worksInAnotherAppsHint => 'worksInAnotherAppsHint'.tr;
+  String get selectRiwayat => 'selectRiwayat'.tr;
 
   /// Notifications  =======================================================
   String get notifications => 'notifications'.tr;
@@ -249,6 +262,7 @@ class AppStrings {
   String get page => 'page'.tr;
   String get pages => 'pages'.tr;
   String get riwayahType => 'riwayahType'.tr;
+  String get riwayat => 'riwayat'.tr;
   String get type => 'type'.tr;
   String get selectLearningObjectives => 'selectLearningObjectives'.tr;
   String get learningObjective => 'learningObjective'.tr;

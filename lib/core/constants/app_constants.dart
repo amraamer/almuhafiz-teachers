@@ -1,4 +1,6 @@
 import 'package:almuhafiz_teachers/core/constants/app_links.dart';
+import 'package:almuhafiz_teachers/core/constants/app_strings.dart';
+import 'package:almuhafiz_teachers/core/data/enums/riwayah.dart';
 import 'package:almuhafiz_teachers/core/mini_models/drop_down_item_model.dart';
 
 abstract class AppConstantsData {
@@ -27,8 +29,15 @@ abstract class AppConstantsData {
   ];
 
   static final List<DropDownItemModel> genders = [
-    DropDownItemModel(title: "ذكر", value: 0),
-    DropDownItemModel(title: "انثى", value: 1),
+    DropDownItemModel(title: AppStrings.instance.male, value: 0),
+    DropDownItemModel(title: AppStrings.instance.female, value: 1),
+  ];
+
+  static final List<DropDownItemModel> riwayat = [
+    DropDownItemModel(title: Riwayah.hafsAnAsim.label, value: 0),
+    DropDownItemModel(title: Riwayah.warshAnNafi.label, value: 1),
+    DropDownItemModel(title: Riwayah.qalunAnNafi.label, value: 2),
+    DropDownItemModel(title: Riwayah.adDuriAnAbiAmr.label, value: 3),
   ];
 
 

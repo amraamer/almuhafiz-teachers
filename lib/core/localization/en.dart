@@ -7,7 +7,7 @@ const Map<String, String> enUs = {
   "enterLongerText": "Enter a longer text",
   "enterAge": "Please enter your age",
   "enterValidNumber": "Please enter a valid number",
-  "ageRange": "Age must be between 12 and 99",
+  "ageRange": "Age must be between 18 and 99",
   "passwordsNotMatch": "Confirmation password does not match",
   "textTooLong140": "Enter text shorter than 140 characters",
   "textTooLong90": "Enter text shorter than 90 characters",
@@ -364,6 +364,19 @@ const Map<String, String> enUs = {
   "quranCompletionDua": "Dua for completing the Quran",
   "quranCompletionDuaText": "O Allah, have mercy on us through the Quran. Make it for us a guide, a light, a source of guidance and mercy. O Allah, remind us of what we have forgotten from it, teach us what we do not know, and grant us its recitation during the hours of the night and the ends of the day in a manner that pleases You.\n\nO Allah, make the Great Quran the spring of our hearts, the light of our chests, the remover of our sorrows, and the relief of our worries and grief.\n\nO Allah, make us among those who deem lawful what it has made lawful, forbid what it has made forbidden, believe in its clear and allegorical verses, and make it an argument for us, not against us, O Lord of the worlds.\n\nO Allah, grant us to act upon it, to stand by its limits, and make us among the people of the Quran who are Your people and Your chosen ones.\n\nO Allah, raise us in ranks through the Quran, grant us happiness in this world, success in Paradise in the Hereafter, and save us from the Fire.\n\nO Allah, conclude our deeds with righteousness, our lives with happiness, and our final destiny with forgiveness and pleasure.\n\nAnd send Your prayers, peace, and blessings upon our Prophet Muhammad, and upon his family and companions all together.",
   "aboutPlatform" : "We are a platform dedicated to serving the Book of Allah, spreading its meanings, and promoting reflection and correct understanding of the Holy Quran in a simple and contemporary manner suitable for all audiences.\n\nWe strive to provide reliable Quranic content that combines the Quranic text with trusted interpretations, transforming meanings into reflective and interactive questions that help users understand, contemplate, and connect the verses to daily life.\n\nWe believe that the Quran is not only for recitation, but for reflection and action. Therefore, we are committed to:\n\n• Providing questions and answers derived from authentic interpretations.\n• Simplifying meanings without compromising their accuracy.\n• Using modern technology to serve the Holy Quran.\n• Offering a calm and beneficial educational experience.\n\nOur goal is for this project to be a means of bringing hearts closer to the words of Allah, helping in understanding and acting upon them. We ask Allah for acceptance and success.\n\n“[This is] a blessed Book which We have revealed to you, that they might reflect upon its verses.”",
-  "chooseOptions": "Choose options"
+  "chooseOptions": "Choose options",
+  "age" : "Age",
+  "riwayat" : "Riwayat",
+  "bio": "Bio",
+  "bioHint": "Write a brief description about yourself",
+  "imagePickError": "An error occurred while selecting the image",
+  "job": "Job",
+  "enterYourJob": "Enter your job",
+  "selectAll" : "Select All",
+  "items": "Items",
+  "select": "Select",
+  "worksInAnotherAppsHint": "Enter other apps [if any]",
+  "selectRiwayat": "Select the riwayat you are proficient in"
+
 
 };

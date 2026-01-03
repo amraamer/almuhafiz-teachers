@@ -1,4 +1,5 @@
-import 'package:almuhafiz_teachers/networking/firebase_service.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_service.dart';
+import 'package:almuhafiz_teachers/core/services/Auth/auth_service.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -7,8 +8,8 @@ class AppInitBindings extends Bindings {
   void dependencies() {
 
     Get.put<FirebaseService>(FirebaseService());
-    final getStorage = Get.put<GetStorage>(GetStorage());
-    // final authService = Get.put<AuthService>(AuthService());
+    Get.put<GetStorage>(GetStorage());
+    Get.put<AuthService>(AuthService());
     // Get.put<FavoriteService>(FavoriteService(getStorage , authService));
     // Get.put<ConnectionController>(ConnectionController());
     // Get.put<AgoraServices>(AgoraServices(), permanent: true);

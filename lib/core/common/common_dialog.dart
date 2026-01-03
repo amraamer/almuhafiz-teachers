@@ -45,7 +45,7 @@ class CommonDialog {
               ),
               hSpace(16),
               Image.asset(
-                Assets.images.loadingImage.path,
+                Assets.pngs.loadingImage.path,
                 height: 150.h,
                 width: 211.w,
               ),
@@ -296,7 +296,7 @@ class CommonDialog {
                   ),
                   hSpace(16),
                   Image.asset(
-                    Assets.images.delete.path,
+                    Assets.pngs.delete.path,
                     height: 120.h,
                     width: 180.w,
                   ),
@@ -352,7 +352,7 @@ class CommonDialog {
     showAlertDialog(
         title: AppStrings.instance.loginFirst,
         bodyText: AppStrings.instance.loginFirstBody,
-        icon: Assets.images.errorCircle.path,
+        icon: Assets.pngs.errorCircle.path,
         firstButtonText: AppStrings.instance.loginNow,
         firstBtnAction: () async => Get.offAllNamed(AppRoutes.login),
         secondBtnAction: () async => Get.back(),
@@ -377,7 +377,7 @@ class CommonDialog {
     showAlertDialog(
         title: AppStrings.instance.logout,
         bodyText: AppStrings.instance.logoutBody,
-        icon: Assets.images.delete.path,
+        icon: Assets.pngs.delete.path,
         firstBtnColor: AppColors.primaryShadeClr,
         firstBtnAction: action,
         secondBtnAction: () async => Get.back(),

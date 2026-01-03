@@ -3,11 +3,11 @@ import 'package:almuhafiz_teachers/core/constants/app_colors.dart';
 import 'package:almuhafiz_teachers/core/constants/app_functions.dart';
 import 'package:almuhafiz_teachers/core/constants/app_strings.dart';
 import 'package:almuhafiz_teachers/core/constants/app_text_styles.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_constants.dart';
+import 'package:almuhafiz_teachers/core/networking/firebase_keys.dart';
 import 'package:almuhafiz_teachers/core/utils/spacer.dart';
 import 'package:almuhafiz_teachers/core/widgets/buttons/primary_button.dart';
 import 'package:almuhafiz_teachers/gen/assets.gen.dart';
-import 'package:almuhafiz_teachers/networking/firebase_constants.dart';
-import 'package:almuhafiz_teachers/networking/firebase_keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -92,7 +92,7 @@ class UpdateService {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             VectorGraphic(
-              loader: AssetBytesLoader(Assets.images.renewal.path),
+              loader: AssetBytesLoader(Assets.pngs.renewal.path),
               width: 200.w,
             ),
             hSpace(20),

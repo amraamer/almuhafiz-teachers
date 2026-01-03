@@ -1,4 +1,5 @@
 import 'package:almuhafiz_teachers/core/constants/app_colors.dart';
+import 'package:almuhafiz_teachers/core/constants/app_dimens.dart';
 import 'package:almuhafiz_teachers/core/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -68,7 +69,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       focusNode: _focusNode,
       controller: widget.controller,
       enabled: widget.enabled,
-      style: AppTextStyles.style16W600Black,
+      style: AppTextStyles.style16W600Primary,
       onChanged: widget.onChange,
       maxLength: widget.maxLength,
       textInputAction: widget.textInputAction,
@@ -76,7 +77,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       maxLines: widget.isPassword ? 1 : widget.maxLines,
       obscureText: widget.isPassword ? _obscureText : false,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(vertical: 12.h),
+        contentPadding: EdgeInsets.symmetric(vertical: AppDimens.h8, horizontal: AppDimens.w8),
         hintText: widget.hintTxt,
         hintStyle: AppTextStyles.style16W600Black40,
         fillColor: widget.fillColor,

@@ -13,6 +13,7 @@ abstract class FireKeys {
   static const String totalReviews = 'totalReviews';
   static const String rank = 'rank';
   static const String name = 'name';
+  static const String bio = 'bio';
   static const String email = 'email';
   static const String phone = 'phone';
   static const String imageProfile = 'imageProfile';
@@ -59,4 +60,12 @@ abstract class FireKeys {
   static const String subscribersCount = 'subscribersCount';
   static const String order = 'order';
   static const String studentIds = 'studentIds';
+  static const String numberOfRate = 'numberOfRate';
+  static const String workingTimes = 'workingTimes';
+  static const String status = 'status';
+  static const String riwayat = 'riwayat';
+  static const String worksInAnotherApps = 'worksInAnotherApps';
+  static const String socialLinks = 'socialLinks';
+  static const String reviewedByAdmin = 'reviewedByAdmin';
+  static const String rate = 'rate';
 }
